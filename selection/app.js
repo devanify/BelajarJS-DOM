@@ -93,4 +93,28 @@ console.log(parag.children) //untuk menapilkan cildern dari p (paragaft)
    console.log(squareimage.previousSibling) //ini akan membaca apa yang ada sebelumnya ,di kode apakah ada enter tab dll (dapat dilihat pada (data : ))
    console.log(squareimage.previousElementSibling) //ini membaca element apa sebelumnya
 
-   
+//Append() dan Prepend()
+
+const newImage = document.createElement('img')
+// console.dir(newImage)   //coba menambahkan image
+newImage.src='https://i.pinimg.com/236x/9c/51/e0/9c51e05468cfa4cb44401cdb3eaa9d65.jpg'
+console.dir(newImage) // cek pada src apakah ada src yang ditambah, lalu untuk menambahkannya ke htlm sebagai berikut
+document.body.appendChild(newImage) // secara defaulnf appendchild menambhakan element ke paling akhir
+newImage.classList.add('square')
+
+const h2 = document.createElement('h2') //membuat elemn h2
+h2.append('This is aout cat') 
+const h1 = document.querySelector('h1') //memilih h1
+//mencoba menambahkan h2 diantara h1 dan paragaraft dengan insetAdjacentElement((posisi (afterbegin atau afterend))), element yang kaan ditambah)
+h1.insertAdjacentElement("afterend",h2)
+
+
+//REMOVE DAN REMOVECHILD
+// const firstList =  document.querySelector('li')
+// // console.log(firstList) kita akan mencoba menghapus element ini
+// //jika menghapus dengan removechil kita harus merujuk dulu ke parentnya berikut syntaxnya
+// //         harus memilih kelas parent terlebih dahulu
+// firstList.parentElement.removeChild(firstList) //tidak praktis wkwkwk alternatif menggunakan remove
+// //semisal saya menggunakan remove pada img pertama
+// const img = document.querySelector('img')
+// img.remove()
